@@ -20,8 +20,44 @@ android {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+<<<<<<< HEAD
         }
     }
+=======
+
+        }
+        debug {
+            applicationIdSuffix ".debug"
+            debuggable true
+        }
+    }
+
+    flavorDimensions "default"
+
+    productFlavors {
+        qa {
+            applicationId "com.example.signupqa"
+            versionCode 2
+            versionName "1.1"
+
+        }
+
+        playstore {
+            applicationId "com.example.signupplaystore"
+            versionCode 3
+            versionName "1.2"
+
+        }
+    }
+    applicationVariants.all { variant ->
+        variant.outputs.each { output ->
+            def outputApkFileName = "ProductFlavour-${variant.name}-${variant.versionName}.apk"
+            output.outputFileName = outputApkFileName
+        }
+    }
+
+
+>>>>>>> 00bc6c2 (ProductFlavours added)
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
@@ -29,6 +65,10 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 00bc6c2 (ProductFlavours added)
 }
 
 dependencies {
