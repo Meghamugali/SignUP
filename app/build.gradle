@@ -20,10 +20,6 @@ android {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
-<<<<<<< HEAD
-        }
-    }
-=======
 
         }
         debug {
@@ -57,7 +53,6 @@ android {
     }
 
 
->>>>>>> 00bc6c2 (ProductFlavours added)
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
@@ -65,10 +60,7 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
-<<<<<<< HEAD
-=======
 
->>>>>>> 00bc6c2 (ProductFlavours added)
 }
 
 dependencies {
